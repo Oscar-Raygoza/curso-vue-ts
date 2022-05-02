@@ -57,21 +57,25 @@ vite build --mode prod
 ## Index
 
 * Historia
-* Alternativas ( otros framewors para la creacion de interfaces )
-* que es vue? ( introduccion a la programacion reactiva )
-* Ecosystem Vue 2
-* DOM 
-* Virtual DOM
-* que es un framework progresivo?
+* Alternativas ( otros framewors para la creación de interfaces )
+* Vue ( introducción a la programación reactiva ) 
+    * reactividad en JavaScript
+    * reactividad
+    * estado
+    * interfaz basada en el estado  
+    * componentes
+    * Programación Reactiva orientada a Componentes
+    * framework progresivo
+    * características principales
+    * SPA
+    * SSR
+    * Ecosystem Vue Js
 * directivas
-* componentes
-* reactividad
-* ciclos de vida
+    * interpolacion 
 * options api
-* composition apí
+* ciclos de vida
+* composition API
 * vue router
-* ref
-* hooks
 * vue 2 vs vue 3 (vue 3 -> Tiene mejor soporte para typescript)
 * tree-shaking ( mejoras en el bundle en vue 3 )
 * example post data
@@ -87,7 +91,7 @@ vite build --mode prod
 
 ## Alternativas
 
-Vue no es la unica herramienta que nos permite crear interfaces para nuestros desarrollos, existen gran variedad de frameworks y librerias que nos dan las herramientas para crear nuestras interfaces.
+Vue no es la única herramienta que nos permite crear interfaces para nuestros desarrollos, existen gran variedad de frameworks y librerías que nos dan las herramientas para crear nuestras interfaces.
 
 ![image](https://user-images.githubusercontent.com/37164456/166173812-22017256-f9b3-40a3-a8a1-d1eaeb4c9818.png)
 
@@ -101,7 +105,7 @@ Vue no es la unica herramienta que nos permite crear interfaces para nuestros de
 * Angular
 * Ember
 
-Las carecterísticas principales de estos frameworks es que cada uno de ellos destaca de javascript, y todos con un enfoque diferente para actualizar el DOM, manejando los eventos del navegador, y brindado una experiencia mas satisfactiria para crear nuestros desarrollos.
+Las características principales de estos frameworks es que cada uno de ellos destaca de javascript, y todos con un enfoque diferente para actualizar el DOM, manejando los eventos del navegador, y brindado una experiencia más satisfactoria para crear nuestros desarrollos.
 
 The Progressive
 JavaScript Framework
@@ -119,14 +123,14 @@ Para comprender el paradigma de la programación reactiva en JavaScript y entend
 
 
 ### reactividad
-Que es reativo ?
+¿Qué es reactivo ?
 
 La reactividad de los datos, simplemente es que la interfaz de usuario de un sitio o aplicación se modifica a los cambios en los datos de la misma.
 
 Cada vez que se actualizan los datos, la interfaz de usuario lo hace automáticamente para que coincida con la lógica de programación de la aplicación.
 
 ### estado
-Que es el estado ?
+¿Cuál es el estado ?
 
 El estado son los datos de tu aplicación.
 
@@ -135,7 +139,7 @@ Entonces, ¿por qué se le llama estado en lugar de datos?
 Porque tiene una duración determinada, el estado son datos en un momento particular de la aplicación, por ello decimos: <b>el estado actual de los datos de la aplicación.</b>
 
 ### interfaz basada en el estado
-Una interfaz basada en el estado, es aquella que usa los datos de la aplicación en todo momento para pintar su elementos visuales.
+Una interfaz basada en el estado, es aquella que usa los datos de la aplicación en todo momento para pintar sus elementos visuales.
 
 Los elementos visuales de la interfaz suelen llamarse componentes.
 
@@ -165,7 +169,7 @@ Con lo descrito anteriormente podemos decir que una aplicación reactiva y basad
 <a href="https://jonmircha.com/reactividad-javascript#:~:text=La%20reactividad%20de%20los%20datos,de%20programaci%C3%B3n%20de%20la%20aplicaci%C3%B3n.">más información</a>
 
 ### framework progresivo
-Que es un framework "progresivo"?
+¿Qué es un framework "progresivo"?
 
 Vue es considerado un framework progresivo, lo que quiere decir que puede ser usado tanto para tareas muy básicas, como alternativa a JQuery, como para tareas bastante más complejas como puede ser la creación de una SPA (Single-page application) completa.
 
@@ -173,23 +177,50 @@ Vue es considerado un framework progresivo, lo que quiere decir que puede ser us
 
 Las funcionalidades principales (el renderizado y el sistema de componentes) están en una pequeña biblioteca, sin embargo es posible añadir todas las funcionalidades que tienen otros frameworks completos como el routing en el lado del cliente , build systems como webpack o systemjs y manejo de estados con herramientas como vuex o redux, añadiendo bibliotecas adicionales. La filosofía detrás de esta forma de construir el framework la explica su creador en esta conferencia donde explica que los frameworks introducen complejidad con el objetivo de disminuir la complejidad de la construcción de aplicaciones, sin embargo muchas veces, o se quedan cortos (si la aplicación es muy grande), o se pasan (si el framework introduce más complejidad de la que necesita la aplicación). Por lo tanto este esquema progresivo permite incluir en la aplicación solo las herramientas que se necesitan.
 
-### caracteristicas principales
+### características principales
 
-Entre las caracteristicas principales de vue, encontramos que es un framwork <b>Reactivo</b> que implementa el enlace de datos en dos direcciones (entre vista y modelo) de una manera muy eficiente y rápida.
+Entre las características principales de vue, encontramos que es un framwork <b>Reactivo</b> que implementa el enlace de datos en dos direcciones (entre vista y modelo) de una manera muy eficiente y rápida.
 
 ![image](https://user-images.githubusercontent.com/37164456/166180319-d0924614-9f31-4b46-b542-de37f4259172.png)
 
 Lo que nos permite crear componentes re-utilizables dentro de nuestra aplicacion.
 
-![image](https://user-images.githubusercontent.com/37164456/166181353-fc9e7cef-6d45-4b6d-b259-afba86e23459.png)
+<img src="https://user-images.githubusercontent.com/37164456/166181353-fc9e7cef-6d45-4b6d-b259-afba86e23459.png" width="750px" height="386px"/>
+
+### ¿que pasa con vue y el virtual dom?
+
+![image](https://user-images.githubusercontent.com/37164456/166187583-a2213ca0-728a-460c-bf15-a34b613418c9.png)
+
+El <b>DOM</b> o <b>Document Object Model</b> es el árbol de nodos que generan los navegadores para entender nuestro código HTML. Y el Virtual DOM es un falso DOM, una copia que nos permite hacer cálculos pesados sin afectar el rendimiento del verdadero DOM.
+
+![image](https://user-images.githubusercontent.com/37164456/166186986-3e52fea3-6597-4fa2-8b77-defae3b88e4a.png)
+![image](https://user-images.githubusercontent.com/37164456/166187860-4ba8c9a5-af2d-48bf-bbd4-f599f87c1063.png)
+
+
+### Ventajas:
+
+* Te permite controlar cuando se actualiza el DOM real, si un elemento se modifica repetidas veces podemos hacer que se renderize solo su última modificación.
+* Es mucho menos costoso modificar una propiedad de un objeto JS que un elemento de un árbol, por lo que una aplicación web con DOM virtual será mucho mas eficiente.
+* Sólo se vuelven a renderizar los elementos que hayan sufrido algún cambio, por ejemplo, si queremos cambiar de una página a otra sólo se velverán a renderizar los elementos que tengan alguna diferencia con el de la página anterior.
+
+### Desventajas:
+
+* Consume mas recursos, ya que necesita tener una copia del DOM cargada en memoria mientras siga funcionando la aplicación.
+* En un programa pequeño y con cambios pocos frecuentes en sus elementos el DOM virtual puede hacer que la aplicación funcione mas lenta que con el DOM real, ya que agrega lógica a cada actualización.
+    
+![image](https://user-images.githubusercontent.com/37164456/166188338-eeee9e75-cc59-44ac-8fff-4de08041ce4a.png)
+
+<b>referencias</b>
+https://platzi.com/blog/virtual-dom/
+https://somospnt.com/blog/88-post-dom-virtual-2
 
 ### SPA
-Que es una SPA ? ( Single page aplication )
+¿Qué es una SPA ? ( Single page application )
 
 ### SSR
-Que es una SSR ( Server side rendering )
+¿Qué es una SSR ( Server side rendering )
 
-## Ecosystem Vue Js
+### Ecosystem Vue Js
 
 | Project               | Status                                                       | Description                                             |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
@@ -228,11 +259,19 @@ Que es una SSR ( Server side rendering )
 [vue-devtools-package]: https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd
 
 
-# Project Backend
+
+## Directivas
+
+ {{ interpolacion }}
+<a href="https://fernando-herrera.com/docs/VueJS-atajos.pdf">Guía de atajos de vue</a>
+
+
+## Project Backend
 
  * <a href="https://github.com/Oscar-Raygoza/backend-pokedex">Link Repository</a>
 
-## Oficial Documentation
+## Official Documentation
 
  * <a href="https://vuejs.org/">Vue 3</a>
  * <a href="https://github.com/logaretm/vee-validate">Vee Validate Documentation</a>
+
