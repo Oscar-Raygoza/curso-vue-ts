@@ -49,15 +49,37 @@ npm run lint
 
 * Node > v14
 * Vs Code 
+## Deploy
+vite build --mode prod
 
+## Index
+
+* historia
+* alternativas
+* que es vue?
+* DOM
+* Virtual dom
+* Web API
+* que es un framework progresivo?
+* directivas
+* componentes
+* reactividad
+* ciclos de vida
+* options api
+* composition apí
+* vue router
+* ref
+* hooks
+* vue 2 vs vue 3 (vue 3 -> Tiene mejor soporte para typescript)
+* tree-shaking ( mejoras en el bundle en vue 3 )
+* example post data
+* composition function or composables ( custom hooks )
+* vuex
 # Project Backend
 
  * <a href="https://github.com/Oscar-Raygoza/backend-pokedex">Link Repository</a>
 
-# Oficial Documentation
+## Oficial Documentation
 
  * <a href="https://vuejs.org/">Vue 3</a>
  * <a href="https://github.com/logaretm/vee-validate">Vee Validate Documentation</a>
-
-# DEPLOY
-vite build --mode prod
