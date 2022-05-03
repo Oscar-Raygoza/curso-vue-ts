@@ -343,7 +343,8 @@ Es por eso que para cualquier lógica compleja, deberia usar una propiedad compu
 https://es.vuejs.org/v2/guide/computed.html
 
 ### watch
-```
+
+``` html
 <div id="example">
   <p>Mensaje watch: "{{ fullMessage }}"</p>
   <p>Mensaje original: "{{ message }}"</p>
@@ -372,14 +373,13 @@ https://es.vuejs.org/v2/guide/computed.html
     },
     fullMessage: function() {
       return this.firstName + " " + this.lastName + " " + this.message;
-    
     },
   },
   watch: {
     message: "serchValue"
   },
   methods: {
-    async serchValue(value, oldValue) {
+    serchValue(value, oldValue) {
       // Create debounced
       console.log({value, oldValue})
       if (this.debouncedSearchTiemeOut)
