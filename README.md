@@ -265,6 +265,134 @@ https://somospnt.com/blog/88-post-dom-virtual-2
  {{ interpolacion }}
 <a href="https://fernando-herrera.com/docs/VueJS-atajos.pdf">Guía de atajos de vue</a>
 
+### v-model
+
+Puede usar la directiva v-model para crear bindings de datos bidireccionales (two-way binding) en elementos input, textarea y select de un formulario. La directiva busca automáticamente la manera correcta de actualizar el elemento según el tipo de entrada. Aunque un poco mágico, v-model es esencialmente syntax sugar para actualización de datos a través de eventos de entradas del usuario, además de mostrar un cuidado especial para algunos casos de borde.
+
+``` html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <div id="app">
+    <span>El mensaje multilínea es:</span>
+    <p style="white-space: pre-line;">{{ message }}</p>
+    <br>
+    <textarea v-model="message" placeholder="agregar múltiples líneas"></textarea>
+  </div>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        message: "v-model"
+      }
+    })
+  </script>
+</body>
+</html>   
+```
+
+### propiedades computadas
+
+Las expresiones en el template son muy convenientes, pero están diseñadas para operaciones simples. Poner demasiada lógica en sus templates puede hacerlos grandes, complejos y difíciles de mantener. Por ejemplo:
+
+``` html
+<div id="example">
+  {{ message.split('').reverse().join('') }}
+</div>
+```
+
+En este punto, el template ya no es simple y declarativo. Debe mirarlo por un segundo antes de darse cuenta de que muestra message al revés. El problema se agrava cuando desea incluir el mensaje invertido en su template más de una vez.
+
+Es por eso que para cualquier lógica compleja, deberia usar una propiedad computada.
+
+``` html
+<div id="example">
+  <p>Mensaje original: "{{ message }}"</p>
+  <p>Mensaje invertido computado: "{{ reversedMessage }}"</p>
+  <textarea v-model="message" placeholder="agregar múltiples líneas"></textarea>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+<script>
+  const vm = new Vue({
+  el: '#example',
+  data: {
+    message: 'test'
+  },
+  computed: {
+    // un getter computado
+    reversedMessage: function () {
+      // `this` apunta a la instancia vm
+      return this.message.split('').reverse().join('')
+    }
+  }
+})
+</script>
+```
+
+https://es.vuejs.org/v2/guide/computed.html
+
+### watch
+```
+<div id="example">
+  <p>Mensaje watch: "{{ fullMessage }}"</p>
+  <p>Mensaje original: "{{ message }}"</p>
+  <p>debouncedSearchValue: "{{ debouncedSearchValue }}"</p>
+  <p>Mensaje invertido computado: "{{ reversedMessage }}"</p>
+  <textarea v-model="message" placeholder="agregar múltiples líneas"></textarea>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+<script>
+  const vm = new Vue({
+  el: '#example',
+  data: {
+    message: 'test',
+    firstName: 'Foo',
+    lastName: 'Bar',
+    debouncedSearchTiemeOut: null,
+    debouncedSearchValue: null
+  },
+  computed: {
+    // un getter computado
+    reversedMessage: function () {
+      // `this` apunta a la instancia vm
+      return this.message.split('').reverse().join('')
+    },
+    fullMessage: function() {
+      return this.firstName + " " + this.lastName + " " + this.message;
+    
+    },
+  },
+  watch: {
+    message: "serchValue"
+  },
+  methods: {
+    async serchValue(value, oldValue) {
+      // Create debounced
+      console.log({value, oldValue})
+      if (this.debouncedSearchTiemeOut)
+        clearTimeout(this.debouncedSearchTiemeOut);
+
+      this.debouncedSearchTiemeOut = setTimeout(() => {
+        this.debouncedSearchValue = value
+      }, 1000);
+    }
+  },
+})
+</script>
+```
 
 ## Project Backend
 
