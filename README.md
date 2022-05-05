@@ -394,10 +394,37 @@ https://es.vuejs.org/v2/guide/computed.html
 </script>
 ```
 
-## Project Backend
+## Proyecto de Backend
 
  * <a href="https://github.com/Oscar-Raygoza/backend-pokedex">Link Repository</a>
 
+
+## Proyecto de fetch github
+
+Creacion de proyecto con vue desde un solo componente para ver nuevas propiedades y practicar desde 0 hasta refactorizar y separa en componentes.
+
+<a href="https://github.com/Oscar-Raygoza/vue-github-commits">vue-github-commits</a>
+
+## Proyecto de  vuex y router blog
+
+Creacion de proyecto de un blog con vuex y vue router
+
+<a href="https://www.github-com/Oscar-Raygoza/blog-vuex-router">link del proyecto</a>
+
+generar un proyecto de typescript con vue@2 y ts.
+
+``` shell
+npm init vue@2
+```
+
+``` shell
+C:\Users\omiramontes\Documents\proyectos4k>npm init vue@2
+√ Project name: ... blog-vuex-router
+√ Add TypeScript? ... No / *Yes
+√ Add Vue Router for Single Page Application development? ... No / *Yes
+√ Add Pinia for state management? ... *No / Yes
+√ Add Cypress for testing? ... No / *Yes
+```
 ## Official Documentation
 
  * <a href="https://vuejs.org/">Vue 3</a>
