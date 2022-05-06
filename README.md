@@ -394,6 +394,46 @@ https://es.vuejs.org/v2/guide/computed.html
 </script>
 ```
 
+## Practica 1 de vue con refactore (Todo App)
+
+Generar un proyecto de vue con vue-cli
+
+``` shell
+$ npm i -g npm install -g @vue/cli
+
+$ vue create vue-todolist-app
+
+```
+
+``` shell
+Vue CLI v5.0.4
+? Please pick a preset: Manually select features
+? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection, and
+<enter> to proceed)
+ (*) Babel
+ () TypeScript
+ (*) Progressive Web App (PWA) Support
+ ( ) Router
+ (*) Vuex
+ ( ) CSS Pre-processors
+>(*) Linter / Formatter
+ ( ) Unit Testing
+ ( ) E2E Testing
+
+```
+
+vue 2
+``` shell
+Vue CLI v5.0.4
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, TS, PWA, Vuex, Linter
+? Choose a version of Vue.js that you want to start the project with
+  3.x
+> 2.x
+```
+
+
+
 ## Vuex
 
 <a href="https://v3.vuex.vuejs.org/#what-is-a-state-management-pattern">documentación de vuex</a>
