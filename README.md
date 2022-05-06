@@ -394,6 +394,55 @@ https://es.vuejs.org/v2/guide/computed.html
 </script>
 ```
 
+## Vuex
+
+<a href="https://v3.vuex.vuejs.org/#what-is-a-state-management-pattern">documentación de vuex</a>
+
+<a href="https://www.youtube.com/watch?v=EgI6Ez7QFXQ&ab_channel=FernandoHerrera">curso de vuex</a>
+
+<b>Que problematica resolvemos con vuex ?</b>
+
+![image](https://user-images.githubusercontent.com/37164456/167066830-6ac9787b-0ce1-4123-9437-2de2bb191f03.png)
+
+![image](https://user-images.githubusercontent.com/37164456/167069595-beee80f8-3d09-431c-a238-dde54ad6d438.png)
+
+
+* flujo del estado sin vuex
+
+![image](https://user-images.githubusercontent.com/37164456/167067006-56c39897-6a98-48b0-9750-04abbd019eb8.png)
+
+* flujo del estado con vuex
+
+![image](https://user-images.githubusercontent.com/37164456/167067373-263c519f-5d5a-42b8-b109-4011ffaa638a.png)
+
+
+![image](https://user-images.githubusercontent.com/37164456/167069473-ae213538-0fac-45de-bd29-d9e08ea95c1d.png)
+
+### store reactivo con vuex
+
+
+<b>!Importante todas nuestras acciones son procesos asíncronas (async) y todos nuestros commits deberan ser síncronos</b>
+
+lo que no tenemos que hacer con vuex
+
+![image](https://user-images.githubusercontent.com/37164456/167067647-b90afc04-28a1-4e51-8b68-cad75cea850a.png)
+
+<b>Conceptos generales de vuex</b>
+
+* <b>State</b>: Es muy similar a la data, es reactiva.
+
+* <b>Getters</b>: Es muy similar a las propiedades computadas.
+
+* <b>Mutations</b>: Funciones que pueden modificar nuestro state.
+
+* <b>Actions</b>: Funciones que pueden ser asíncronas y tambien pueden llamar a las mutations.
+
+* <b>Modulos</b>: Es un Agrupador de nuestro state, getters, mutations, actions y otros modulos.
+
+
+cuando usamos vuex ?
+
+
 ## Proyecto de Backend
 
  * <a href="https://github.com/Oscar-Raygoza/backend-pokedex">Link Repository</a>
@@ -404,6 +453,7 @@ https://es.vuejs.org/v2/guide/computed.html
 Creacion de proyecto con vue desde un solo componente para ver nuevas propiedades y practicar desde 0 hasta refactorizar y separa en componentes.
 
 <a href="https://github.com/Oscar-Raygoza/vue-github-commits">vue-github-commits</a>
+
 
 ## Proyecto de  vuex y router blog
 
