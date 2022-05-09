@@ -515,6 +515,12 @@ C:\Users\omiramontes\Documents\proyectos4k>npm init vue@2
 √ Add Pinia for state management? ... *No / Yes
 √ Add Cypress for testing? ... No / *Yes
 ```
+
+Mixins: https://es.vuejs.org/v2/guide/mixins.html
+Vue class components:  https://class-component.vuejs.org/guide/
+Vue Router:https://v3.router.vuejs.org/guide/#html
+Vuetify: https://vuetifyjs.com/en/getting-started/installation/
+
 ## Official Documentation
 
  * <a href="https://vuejs.org/">Vue 3</a>
