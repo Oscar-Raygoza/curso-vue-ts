@@ -1,0 +1,61 @@
+/**
+ * @copyright Palace Resorts
+ * @description notification sass base
+ * @author Oscar Eduardo Raygoza
+ * @creationDate 08 de Septiembre del 2021
+ */
+
+.notification {
+  width: 100%;
+  height: auto;
+  background-color: _palette(tertiary);
+}
+
+.container__text > a.uri {
+  color: _palette(primary);
+  display: inline-block;
+}
+
+.container__text {
+  padding: 25px 25px 25px 25px;
+  font-size: 14px;
+  font-family: "Roboto";
+  color: #fff;
+  text-transform: none;
+  font-size: 14px;
+  font-style: inherit;
+  line-height: 1.33333;
+  color: #dfe1e6;
+  font-weight: 700;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 4px;
+  margin-top: 5px;
+  & > p {
+    display: contents;
+  }
+}
+.notification__close {
+  position: relative;
+  float: right;
+  top: -8px;
+  left: 7px;
+  color: _palette(primary);
+  background-color: _palette(bg);
+  padding: 3px 7px;
+  font-size: 9px;
+  font-weight: 900;
+  border: 4px solid _palette(tertiary);
+  border-radius: 50px;
+  cursor: pointer;
+  & > a:-webkit-any-link {
+    color: _palette(primary);
+  }
+  &> a {
+    color: _palette(activeLink) !important;
+  }
+}
+
+.close_menu {
+  display: none;
+}

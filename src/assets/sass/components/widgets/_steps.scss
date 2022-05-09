@@ -1,0 +1,22 @@
+.step {
+  text-align: center;
+  font-size: 0px;
+  padding: 3px;
+  border-radius: 50%;
+  margin: 4px;
+  align-content: center;
+  text-align: center;
+  &.step-1 {
+    background-color: _palette(activeLink);
+    border: 1px solid _palette(activeLink);
+  }
+  &.step-0 {
+    background-color: _palette(tertiary);
+    border: 1px solid _palette(tertiary);
+  }
+}
+
+.flex__item.col-2 {
+  width: calc(100% - 1.5em);
+  text-align: center;
+}

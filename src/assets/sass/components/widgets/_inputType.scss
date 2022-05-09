@@ -1,0 +1,191 @@
+/**
+ * @copyright Palace Resorts
+ * @description inputs sass base
+ * @author Oscar Eduardo Raygoza
+ * @creationDate 12 de Septiembre del 2021
+ */
+
+.container__input {
+  margin-top: 8px;
+  &--label {
+    font-size: 15px;
+    font-style: inherit;
+    line-height: 1.33333;
+    color: _palette(labelColor);
+    font-weight: 600;
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    margin-bottom: 4px;
+    margin-top: 0px;
+  }
+  &--required {
+    color: _palette(activeLink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    padding-left: 2px;
+  }
+  &_base--field {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: var(
+      --background-subtleBorderedNeutral-resting,
+      _palette(fontColor)
+    );
+    border-color: var(--border-neutral, _palette(borderColor));
+    color: var(--text-highEmphasis, #091e42);
+    cursor: text;
+    border-width: 2px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    font-size: 14px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow: hidden;
+    -webkit-transition: background-color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    word-wrap: break-word;
+    vertical-align: top;
+    pointer-events: auto;
+  }
+  &--field {
+    background-color: transparent;
+    border: 0;
+    box-sizing: border-box;
+    color: inherit;
+    cursor: inherit;
+    font-size: 14px;
+    min-width: 0;
+    outline: none;
+    width: 100%;
+    line-height: 1.4285714285714286;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  &--description {
+    font-size: 14px;
+    font-style: inherit;
+    line-height: 1.33333;
+    font-weight: normal;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    color: _palette(errorFont);
+    margin-top: 4px;
+    display: flex;
+  }
+}
+
+.input__select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  &:after {
+    content: "\025be";
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    pointer-events: none;
+  }
+}
+
+.input__radio {
+  background-color: transparent;
+  border: none;
+  color: _palette(fontColor);
+}
+
+.container__input--file {
+  border: 2px dashed _palette(tertiary);
+  padding: 10;
+  font-style: 16px;
+  line-height: 1.3333333333333333;
+  color: _palette(tertiary);
+  font-weight: 600;
+  display: "inline-block";
+  font-family: "-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Fira Sans','Droid Sans','Helvetica Neue',sans-serif";
+  margin-bottom: 30;
+  text-align: "center";
+}
+.e-css.e-btn {
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  border-width: 0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 16px;
+  font-style: normal;
+  font-family: inherit;
+  color: _palette(fontColor);
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: background 0.1s ease-out,
+    box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  transition: background 0.1s ease-out,
+    box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  white-space: nowrap;
+  background: _palette(primary);
+  cursor: pointer;
+  height: 2.2857142857142856em;
+  line-height: 2.2857142857142856em;
+  padding: 0 10px;
+  vertical-align: middle;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.e-control.e-uploader.e-lib {
+  display: none;
+}
+.e-file-drop {
+  font-size: 16px;
+  color: _palette(fontColor);
+}
+.e-upload-file-list {
+  margin-top: 10px;
+  font-size: 16px;
+}
+.e-file-size {
+  margin-left: 10px;
+  color: _palette(activeLink);
+}
+
+.helper__message {
+  font-size: 14px;
+  font-style: inherit;
+  line-height: 1.33333;
+  color: _palette(borderColor);
+  font-weight: 700;
+  display: inline-block;
+  font-family: _font(family-apple);
+  margin-bottom: 4px;
+  margin-top: 5px;
+}

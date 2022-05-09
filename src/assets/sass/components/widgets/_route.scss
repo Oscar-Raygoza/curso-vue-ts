@@ -1,0 +1,17 @@
+/**
+ * @copyright Palace Resorts
+ * @description routes sass base
+ * @author Oscar Eduardo Raygoza
+ * @creationDate 10 de Septiembre del 2021
+ */
+.route .route__link {
+  position: relative;
+  color: _palette(secundary);
+  top: -8px;
+  left: 15px;
+  font-family: _font(family);
+  text-transform: uppercase;
+  & > a.uri {
+    color: _palette(primary);
+  }
+}

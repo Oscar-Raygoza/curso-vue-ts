@@ -1,0 +1,74 @@
+/**
+ * @copyright Palace Resorts
+ * @description buttons sass base
+ * @author Oscar Eduardo Raygoza
+ * @creationDate 06 de Septiembre del 2021
+ */
+
+.btn-small {
+  font-size: 14px !important;
+  padding: 5px 15px !important;
+}
+
+.btn__container > button {
+  color: _palette(primary);
+  display: inline-block;
+  font-family: "Miso-Light";
+  font-size: 23.4px;
+  font-weight: 100;
+  letter-spacing: 1.08px;
+  padding: 0.8rem 1.3rem;
+  line-height: 21.6px;
+
+  text-align: -moz-center;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid _palette(activeLink);
+  color: _palette(activeLink);
+  cursor: pointer;
+  &:hover {
+    background-color: _palette(primary);
+    border: 1px solid _palette(primary);
+    color: _palette(fontColor);
+  }
+}
+
+.btn__container {
+  margin-top: 20px;
+
+  &--alignCenter {
+    text-align: center;
+  }
+  &--alignLeft {
+    text-align: left;
+  }
+  &--alignRight {
+    text-align: right;
+  }
+}
+
+.btn__primary {
+  background-color: _palette(primary) !important;
+  color: _palette(fontColor) !important;
+  border-color: _palette(primary) !important;
+  &:hover {
+    background-color: _palette(activeLink) !important;
+    border-color: _palette(activeLink) !important;
+    color: _palette(bg) !important;
+  }
+}
+
+button:disabled,
+button[disabled=""] {
+  background-color: _palette(disabled) !important;
+  color: #000 !important;
+  border-color: #000 !important;
+  cursor: auto;
+
+  &:hover {
+    background-color: _palette(disabled) !important;
+    color: #000 !important;
+    border-color: #000 !important;
+    cursor: auto;
+  }
+}

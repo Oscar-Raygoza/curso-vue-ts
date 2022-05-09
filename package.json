@@ -1,31 +1,37 @@
 {
   "name": "curso-vue-ts",
   "version": "1.0.0",
+  "author": "OscarRaygoza_",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build --mode production",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 5050",
-    "typecheck": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "vue": "3.2.33",
-    "vue-router": "4.0.14",
-    "vuex": "4.0.2"
+    "@vue/composition-api": "^1.4.6",
+    "vue": "^2.6.14",
+    "vue-property-decorator": "^9.1.2",
+    "vue-router": "^3.5.3",
+    "vuetify": "^2.6.2",
+    "vuex": "^3.6.2",
+    "@mdi/font": "5.9.55"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.1.0",
-    "@types/node": "^16.11.27",
-    "@vitejs/plugin-vue": "^2.3.1",
-    "@vitejs/plugin-vue-jsx": "^1.3.10",
-    "@vue/eslint-config-prettier": "^7.0.0",
-    "@vue/eslint-config-typescript": "^10.0.0",
-    "@vue/tsconfig": "^0.1.3",
-    "eslint": "^8.5.0",
-    "eslint-plugin-vue": "^8.2.0",
-    "prettier": "^2.5.1",
-    "typescript": "~4.6.3",
-    "vite": "^2.9.5",
-    "vue-tsc": "^0.34.7"
+    "@types/node": "^16.11.25",
+    "@vitejs/plugin-legacy": "^1.7.1",
+    "@vue/runtime-dom": "^3.2.31",
+    "deepmerge": "^4.2.2",
+    "sass": "~1.32",
+    "sass-loader": "^12.6.0",
+    "typescript": "~4.5.5",
+    "unplugin-vue-components": "^0.19.3",
+    "unplugin-vue2-script-setup": "^0.9.3",
+    "vite": "^2.8.4",
+    "vite-plugin-vue2": "^1.9.3",
+    "vue-template-babel-compiler": "^1.2.0",
+    "vue-template-compiler": "^2.6.14",
+    "vue-tsc": "^0.31.4",
+    "vuetify-loader": "^1.7.0"
   }
 }

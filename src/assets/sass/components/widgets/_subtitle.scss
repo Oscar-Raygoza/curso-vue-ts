@@ -1,0 +1,29 @@
+/**
+ * @copyright Palace Resorts
+ * @description subtitle sass base
+ * @author Oscar Eduardo Raygoza
+ * @creationDate 10 de Septiembre del 2021
+ */
+
+.subtitle__container {
+  color: _palette(activeLink);
+  font-family: "Miso-Light";
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 0.84px;
+  line-height: 35px;
+  margin: 20px;
+  text-transform: uppercase;
+  &--icon {
+    width: 16px;
+    height: auto;
+    margin-right: 10px;
+  }
+}
+.title__container--subtitle {
+  position: relative;
+  margin: 20px;
+  padding: 3px 7px;
+  font-size: 13px;
+  border-radius: 50px;
+}

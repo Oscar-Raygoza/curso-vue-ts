@@ -1,12 +1,19 @@
-import { createApp } from "vue";
+import Vue from "vue";
 
 import App from "@/App.vue";
 import store from "@/store";
 import router from "@/router";
 
-const app = createApp(App);
+import vuetify from "@/plugins/vuetify";
 
-app.use(store);
-app.use(router);
+// Custom directives
+import "@/directives";
 
-app.mount("#app");
+Vue.config.productionTip = true;
+
+new Vue({
+  router,
+  store,
+  vuetify,
+  render: (h) => h(App),
+}).$mount("#app");

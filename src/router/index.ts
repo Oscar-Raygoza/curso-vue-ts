@@ -1,25 +1,61 @@
-import { createRouter, createWebHistory } from "vue-router";
-import PokedexView from "@/views/PokedexView.vue";
+import Vue, { Component } from "vue";
+import Router from "vue-router";
 
-console.log(import.meta.env.VITE_BASE_BACKEND_URL);
+/**
+ * Config
+ */
+Vue.use(Router);
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: "/",
-      name: "PokedexView",
-      component: PokedexView,
-    },
-    {
-      path: "/pokemons",
-      name: "PokemonsView",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/PokemonsView.vue"),
-    },
-  ],
+/**
+ * Views Components
+ */
+import HomeView from "@/views/Home/Index.vue";
+import Error from "@/views/Error/Index.vue";
+import About from "@/views/About/Index.vue";
+
+interface MetaOptions { 
+  showBreadcrumb: boolean;
+  lazyLoad: boolean; 
+  component: Component;
+}
+
+interface RedirectOptions { 
+  name: string;
+}
+
+interface RouterOptions { 
+  path: string;
+  name?: string;
+  meta?: MetaOptions;
+  redirect?: RedirectOptions;
+}
+
+/**
+ * Router Options
+ */
+const routerOptions: RouterOptions[] = [
+  {
+    path: "/",
+    name: "Home",
+    meta: { showBreadcrumb: true, lazyLoad: false, component: HomeView },
+  },
+  { path: "/about", name: "About", meta: { showBreadcrumb: false, lazyLoad: false, component: About } },
+  { path: "/error", name: "Error", meta: { showBreadcrumb: false, lazyLoad: false, component: Error } },
+  { path: "*", redirect: { name: "Home" } },
+];
+
+const routes = routerOptions.map((r) => {
+  return {
+    ...r,
+    component: r.meta?.lazyLoad
+      ? () => import(`../views/${r.name}/Index.vue`)
+      : r.meta?.component,
+  };
+});
+
+const router = new Router({
+  mode: "history",
+  routes,
 });
 
 export default router;
