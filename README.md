@@ -521,6 +521,10 @@ Vue class components:  https://class-component.vuejs.org/guide/
 Vue Router:https://v3.router.vuejs.org/guide/#html
 Vuetify: https://vuetifyjs.com/en/getting-started/installation/
 
+Vue Router 
+![image](https://user-images.githubusercontent.com/37164456/167435921-573d56b3-6390-48fd-92d5-528f48699a31.png)
+
+
 ## Official Documentation
 
  * <a href="https://vuejs.org/">Vue 3</a>
