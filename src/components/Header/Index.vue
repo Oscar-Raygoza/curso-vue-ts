@@ -3,7 +3,7 @@
     <v-app-bar class="app-bar" absolute color="white">
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Title</v-toolbar-title>
+      <v-toolbar-title>Pokedex Palace</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -17,6 +17,7 @@
 </template>
 
 <script lang="ts">
+import { title } from 'process';
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
@@ -24,14 +25,17 @@ import { Component, Vue } from 'vue-property-decorator';
   computed: {}
 })
 export default class HeaderComponent extends Vue {
-  private items = [];
+  public items = [];
+  public menuItems = [];
+
   data(): any {
     return {
       appTitle: 'Awesome App',
       sidebar: false,
       menuItems: [
         { title: 'Home', path: '/', icon: 'mdi-home' },
-        { title: 'About', path: '/about', icon: 'mdi-information' },
+        { title: 'Pokehome', path: '/pokehome', icon: 'mdi-pokeball' },
+        { title: 'PokedexView', path: '/pokedex-vuex', icon: 'mdi-pokeball' },
         { title: 'Error', path: '/error', icon: 'mdi-alert' }
       ]
     }

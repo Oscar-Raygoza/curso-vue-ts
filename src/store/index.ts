@@ -11,6 +11,9 @@ import type { LoadingStateInterface } from "./loading/state";
 import error from "./error";
 import type { ErrorStateInterface } from "./error/state";
 
+import pokedex from "./pokedex";
+import type { PokedexStateInterface } from "./pokedex/state";
+
 Vue.use(Vuex);
 export interface StateInterface {
   // Define your own store structure, using submodules if needed
@@ -19,12 +22,14 @@ export interface StateInterface {
   example: ExampleStateInterface;
   loading: LoadingStateInterface;
   error: ErrorStateInterface;
+  pokedex: PokedexStateInterface;
 }
 
 export default new Vuex.Store<StateInterface>({
   modules: {
     example: exampleModule,
     loading,
-    error
+    error,
+    pokedex,
   },
 });

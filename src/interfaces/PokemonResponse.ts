@@ -1,4 +1,4 @@
-export interface Pokedex {
+export interface PokemonResponse {
     pokemon: Pokemon[];
 }
 

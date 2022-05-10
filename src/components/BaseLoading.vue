@@ -3,7 +3,7 @@
     <div class="spinner-wrapper w-100">
       <!-- Snippet component here -->
     </div>
-    <h1 class="my-5">Loading...</h1>
+    <h1 class="info">Loading...</h1>
   </div>
 </template>
 
@@ -45,5 +45,10 @@ export default {
 .spinner-wrapper .spinner {
   width: 4rem;
   height: 4rem;
+  color: #000;
 }
+.info {
+  color: #000;
+}
+
 </style>
