@@ -1,34 +1,9 @@
 <template>
-  <v-footer
-    dark
-    padless
-  >
-    <v-card
-      class="flex"
-      flat
-      tile
-    >
-      <v-card-title class="teal">
-        <strong class="subheading">Get connected with us on social networks!</strong>
-
-        <v-spacer></v-spacer>
-
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-4"
-          dark
-          icon
-        >
-          <v-icon size="24px">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
-      </v-card-title>
-
-      <v-card-text class="py-2 white--text text-center">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-      </v-card-text>
+  <v-footer padless>
+    <v-col class="text-center" cols="12">
+      {{ new Date().getFullYear() }} — <strong><a style="color: #000" href="https://www.github.com/Oscar-Raygoza"
+          target="_blank">Oscar-Raygoza_</a></strong>
+    </v-col>
     </v-card>
   </v-footer>
 </template>
@@ -64,6 +39,11 @@ export default class FooterComponent extends Vue {
   height: 180px;
   padding: 30px;
   background-color: var(--vt-c-black);
+}
+.v-btn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .logo {
   width: 3rem;

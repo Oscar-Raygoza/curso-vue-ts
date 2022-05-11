@@ -30,8 +30,7 @@ export default class HeaderComponent extends Vue {
       appTitle: 'Palace App',
       sidebar: false,
       menuItems: [
-        { title: 'Home', path: '/', icon: 'mdi-home' },
-        { title: 'Pokehome', path: '/pokehome', icon: 'mdi-pokeball' },
+        { title: 'Pokehome', path: '/', icon: 'mdi-pokeball' },
         { title: 'Pokedex', path: '/pokedex', icon: 'mdi-pokeball' },
       ]
     }

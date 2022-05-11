@@ -34,17 +34,12 @@ interface RouterOptions {
  * Router Options
  */
 const routerOptions: RouterOptions[] = [
-  {
-    path: "/",
-    name: "Home",
-    meta: { showBreadcrumb: true, lazyLoad: false, component: HomeView },
-  },
   { path: "/about", name: "About", meta: { showBreadcrumb: false, lazyLoad: false, component: About } },
   { path: "/error", name: "Error", meta: { showBreadcrumb: false, lazyLoad: false, component: Error } },
   { path: "/pokedex", name: "Pokedex", meta: { lazyLoad: true }},
   { path: "/pokedex/pokemon/:name", name: "PokedexView", meta: { lazyLoad: true }},
-  { path: "/pokehome", name: "PokeHome", meta: { lazyLoad: true }},
-  { path: "*", redirect: { name: "Home" } },
+  { path: "/", name: "PokeHome", meta: { lazyLoad: true }},
+  { path: "*", redirect: { name: "PokeHome" } },
 ];
 
 const routes = routerOptions.map((r) => {
