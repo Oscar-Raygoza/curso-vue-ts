@@ -14,9 +14,9 @@ import Error from "@/views/Error/Index.vue";
 import About from "@/views/About/Index.vue";
 
 interface MetaOptions { 
-  showBreadcrumb: boolean;
+  showBreadcrumb?: boolean;
   lazyLoad: boolean; 
-  component: Component;
+  component?: Component;
 }
 
 interface RedirectOptions { 
@@ -41,6 +41,9 @@ const routerOptions: RouterOptions[] = [
   },
   { path: "/about", name: "About", meta: { showBreadcrumb: false, lazyLoad: false, component: About } },
   { path: "/error", name: "Error", meta: { showBreadcrumb: false, lazyLoad: false, component: Error } },
+  { path: "/pokedex", name: "Pokedex", meta: { lazyLoad: true }},
+  { path: "/pokedex/pokemon/:name", name: "PokedexView", meta: { lazyLoad: true }},
+  { path: "/pokehome", name: "PokeHome", meta: { lazyLoad: true }},
   { path: "*", redirect: { name: "Home" } },
 ];
 
